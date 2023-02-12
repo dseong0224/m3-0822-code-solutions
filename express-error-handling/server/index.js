@@ -36,11 +36,7 @@ app.post('/api/grades', (req, res, next) => {
   if (!name || !course) {
     throw new ClientError(400, 'name, course, and score are required fields');
   }
-  const sql = `
-    insert into "grades" ("name", "course", "score")
-    values ($1, $2, $3)
-    returning *
-  `;
+  const sql = 'insert into "grades" ("name", "course", "score") values ($1, $2, $3) returning *';
   const params = [name, course, score];
   db.query(sql, params)
     .then(result => {
@@ -58,11 +54,7 @@ app.get('/api/grades/:gradeId', (req, res, next) => {
     });
     return;
   }
-  const sql = `
-    select *
-      from "grades"
-     where "gradeId" = $1
-  `;
+  const sql = 'select * from "grades" where "gradeId" = $1';
   const params = [gradeId];
   db.query(sql, params)
     .then(result => {
@@ -115,11 +107,7 @@ app.delete('/api/grades/:gradeId', (req, res, next) => {
   if (!Number.isInteger(gradeId) || gradeId < 1) {
     throw new ClientError(400, 'grade must be a positive integer');
   }
-  const sql = `
-    delete from "grades"
-     where "gradeId" = $1
-    returning *
-  `;
+  const sql = 'delete from "grades" where "gradeId" = $1 returning *';
   const params = [gradeId];
   db.query(sql, params)
     .then(result => {
