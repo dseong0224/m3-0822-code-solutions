@@ -1,3 +1,6 @@
+// What is Array.prototype.map useful for?
+// Array.prototype.map is useful when trying to call a funtion on every element within an array
+
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 const languages = [
@@ -9,17 +12,17 @@ const languages = [
 ];
 
 // doubled - all numbers multiplied by 2.
-const map1 = numbers.map(number => number * 2);
-console.log('map1: ', map1);
+const doubled = numbers.map(number => number * 2);
+console.log('doubled: ', doubled);
 
 // prices - all numbers formatted into "$0.00" strings.
-const map2 = numbers.map(number => '$' + number.toFixed(2));
-console.log('map2: ', map2);
+const prices = numbers.map(number => '$' + number.toFixed(2));
+console.log('prices: ', prices);
 
 // upperCased - all languages converted to uppercase.
-const map3 = languages.map(language => language.toUpperCase());
-console.log('map3: ', map3);
+const upperCased = languages.map(language => language.toUpperCase());
+console.log('upperCased: ', upperCased);
 
 // firstLetters - the first letter of each language.
-const map4 = languages.map(language => language.charAt(1));
-console.log('map4: ', map4);
+const firstLetters = languages.map(language => language.charAt(1));
+console.log('firstLetters: ', firstLetters);
