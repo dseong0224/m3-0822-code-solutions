@@ -1,3 +1,6 @@
+// What is Array.prototype.filter useful for?
+// Array.prototype.filter is useful when trying to create a shallow copy of an array filtered by a conditional
+
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 const names = [
@@ -13,17 +16,17 @@ const names = [
 ];
 
 // evenNumbers - all numbers that are divisible by 2.
-const result1 = numbers.filter(number => number % 2 === 0);
-console.log('result 1: ', result1);
+const evenNumbers = numbers.filter(number => number % 2 === 0);
+console.log('evenNumbers: ', evenNumbers);
 
 // overFive - all numbers that are greater than 5.
-const result2 = numbers.filter(number => number > 5);
-console.log('result 2: ', result2);
+const overFive = numbers.filter(number => number > 5);
+console.log('overFive: ', overFive);
 
 // startWithE - all names that start with a 'E'.
-const result3 = names.filter(name => name.startsWith('E'));
-console.log('result 3: ', result3);
+const startWithE = names.filter(name => name.startsWith('E'));
+console.log('startWithE: ', startWithE);
 
 // haveD - all names that include a 'D' or a 'd'.
-const result4 = names.filter(name => name.toLowerCase().includes('d'));
-console.log('result 4: ', result4);
+const haveD = names.filter(name => name.toLowerCase().includes('d'));
+console.log('haveD: ', haveD);
