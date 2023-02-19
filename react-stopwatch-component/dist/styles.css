@@ -1,0 +1,38 @@
+html,
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.face {
+  height: 200px;
+  width: 200px;
+  background: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.play-css {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 30px solid green;
+}
+
+.stop-css {
+  height: 30px;
+  width: 30px;
+  background-color: red;
+}
+
+.stop-play-btn {
+  margin-top: 25px;
+  margin-left: 90px;
+  cursor: pointer;
+}
