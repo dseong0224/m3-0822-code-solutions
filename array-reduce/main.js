@@ -1,3 +1,6 @@
+// What is Array.prototype.reduce useful for?
+// Array.prototype.reduce is useful when trying to return a single value that combines the result of cumulatively executing a function on each element.
+
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 const account = [
@@ -27,13 +30,10 @@ console.log('product: ', product);
 
 // balance - a number that is the result of combining all transactions in account. The correct answer is 180.
 const balance = account.reduce((balance, transaction) => {
-  const transactionAmount = transaction.amount;
-  const transactionType = transaction.type;
-
-  if (transactionType === 'deposit') {
-    balance += transactionAmount;
+  if (transaction.type === 'deposit') {
+    balance += transaction.amount;
   } else {
-    balance -= transactionAmount;
+    balance -= transaction.amount;
   }
   return balance;
 }, 0);
@@ -41,9 +41,16 @@ const balance = account.reduce((balance, transaction) => {
 console.log('balance: ', balance);
 
 // composite - an object that is the result of combining all properties of the objects within traits. composite should come out like this (property order doesn't matter):
+
 const composite = traits.reduce((composite, trait) => {
-  const traitKey = Object.keys(trait)[0];
-  composite[traitKey] = trait[Object.keys(trait)[0]];
-  return composite;
+  return Object.assign(composite, trait);
 }, {});
+
 console.log('composite: ', composite);
+
+// const composite = traits.reduce((composite, trait) => {
+//   const traitKey = Object.keys(trait)[0];
+//   composite[traitKey] = trait[Object.keys(trait)[0]];
+//   return composite;
+// }, {});
+// console.log('composite: ', composite);
