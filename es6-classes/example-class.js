@@ -1,3 +1,19 @@
+// What is "syntactic sugar" ?
+// Syntactic sugar allows for a more concise or easier-to-read syntax without changing the underlying functionality of the code
+
+// What is the typeof an ES6 class?
+// function
+
+// Describe ES6 class syntax.
+// class Person {
+// constructor(name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
+
+// What is "refactoring" ?
+// Refactoring is the process of improving the looks and structure of existing code without changing its behavior
+
 class ExampleClass {
 
 }
