@@ -1,3 +1,9 @@
+// How are ES Modules different from CommonJS modules ?
+// ES Modules offer better performance, cleaner syntax, and better browser support than CommonJS modules, but CommonJS modules remain a popular choice for server-side development with Node.js
+
+// What kind of modules can Webpack support ?
+// ES modules, CommonJS modules, CSS modules, JSON modules
+
 import { createElement, noop } from '../lib';
 import TodoList from './todo-list';
 import TodoForm from './todo-form';
